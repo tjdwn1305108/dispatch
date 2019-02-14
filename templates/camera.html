@@ -1,0 +1,31 @@
+<html>
+    <head>
+	    <title>Flask Video Test</title>
+	    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    </head>
+    <body>
+	    <h1>Flask Video Test</h1>
+	    <img src="{{ url_for('iot_camera_run') }}">
+	    <br>
+	    <br>
+	    <button>RUN</button>
+
+	    <script>
+            $('button').click(function ()
+            {
+                $.get('RUN')
+			    .done(function (data)
+			    {
+			        if (data == '1')
+			        {
+					    alert('Success!');
+			        }
+			        else
+			        {
+					    alert('Fail!');
+				    }
+			    });
+		    });
+	    </script>
+    </body>
+</html>

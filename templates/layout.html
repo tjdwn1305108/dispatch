@@ -1,0 +1,50 @@
+﻿<!doctype html>
+<html>
+<head>
+    <title>Flask Templage Example</title>
+    <style type="text/css">
+        h2 {
+            color: #006699;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 10px;
+        }
+
+        .list {
+            list-style: none;
+            width: 100%;
+            background: #ff9900;
+            padding: 5px;
+            margin: 0;
+        }
+
+            .list li:before {
+                content: "★";
+                padding-right: 8px;
+                color: blue;
+            }
+
+        .footer {
+            text-align: center;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" align ="left">
+        <!-- header -->
+        <h2>==============================</h2>
+        <h2>=========== Flask ==============</h2>
+        <h2>==============================</h2>
+        <br>
+
+        <!-- body -->
+        {% block content %}{% endblock %}
+
+        <br>
+    </div>
+
+</body>
+</html>

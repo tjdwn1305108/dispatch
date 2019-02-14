@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title> 플라스크 구구단 </title>
+    </head>
+    <body>
+        <form method="POST" action="/calcul">
+            <h1> 출력하고자 하는 구구단을 입력하세요.</h1>
+            <input type="text" name="iot_num">
+            <button type="submit">구구단 출력하기</button>
+        </form>
+        <div>
+            <p>
+                {% if iot_num == None %}
+                  <h1> 숫자를 입력해 주세요 </h1>
+                {% else %}
+                    {% for icnt in range(1,10) %}
+                        <p>{{iot_num}} x {{icnt}} = {{iot_num*icnt}}</br></p>
+                    {% endfor %}
+                {% endif %}
+            </p>
+        </div>
+    </body>
+</html>

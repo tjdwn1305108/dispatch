@@ -1,0 +1,14 @@
+﻿{% extends "layout.html" %}
+{% block content %}
+	<table class = 'table'>
+		{% for key, value in hw_info.iteritems() %}
+			<tr>
+				<th> {{key}} </th>
+				<td> {{value}} </td>
+			</tr>
+		{% endfor %}
+	</table>
+	<button id="led_on" class="button" onclick="window.location.href='/led/on'">ON</button>
+	<button id="led_off" class="button" onclick="window.location.href='/led/off'">OFF</button>
+	<button id="led_off" class="button" onclick="window.location.href='/led/toggle'">Toggle</button>
+{% endblock %}

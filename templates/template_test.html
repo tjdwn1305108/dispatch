@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>템플릿 테스트</title>
+    </head>
+    <body>
+        <div>
+            <h3> - 넘버 : {{ iot_number }} </h3>
+            {% if not session.logged_in %}
+                <h3> <a href="{{ url_for('login') }}">로그인</a> 해주세요. </h3>
+            {% else %}
+                <h3> <a href="{{ url_for('logout') }}">로그아웃</a> </h3>
+            {% endif %}
+                <h3> - IoT 과정 </h3>
+            {% for i in iot_members %}
+                <h3> {{ i }} </h3>
+                {% if i == "주수홍" %}
+                    <h5> {{ i }}은 잘생겼다.. </h5>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </body>
+</html>
